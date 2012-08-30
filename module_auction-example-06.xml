@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_auction-example-06" default="compile.module.auction-example-06">
+  <dirname property="module.auction-example-06.basedir" file="${ant.file.module_auction-example-06}"/>
+  
+  <property name="module.jdk.home.auction-example-06" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.auction-example-06" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.auction-example-06" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.auction-example-06" value="${compiler.args}"/>
+  
+  <property name="auction-example-06.output.dir" value="${module.auction-example-06.basedir}/bin"/>
+  <property name="auction-example-06.testoutput.dir" value="${module.auction-example-06.basedir}/bin"/>
+  
+  <path id="auction-example-06.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="auction-example-06.module.production.classpath">
+    <pathelement location="${basedir}/lib/deploy/commons-io-1.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/commons-lang-2.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smack_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smackx_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/develop/cglib-nodep-2.2.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-4.6-src.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-dep-4.6.jar"/>
+    <pathelement location="${basedir}/lib/develop/objenesis-1.0.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-core-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-swing-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-legacy-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-junit4-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-core-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-library-SNAPSHOT.jar"/>
+    <path refid="${module.jdk.classpath.auction-example-06}"/>
+  </path>
+  
+  <path id="auction-example-06.runtime.production.module.classpath">
+    <pathelement location="${auction-example-06.output.dir}"/>
+    <pathelement location="${basedir}/lib/deploy/commons-io-1.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/commons-lang-2.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smack_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smackx_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/develop/cglib-nodep-2.2.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-4.6-src.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-dep-4.6.jar"/>
+    <pathelement location="${basedir}/lib/develop/objenesis-1.0.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-core-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-swing-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-legacy-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-junit4-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-core-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-library-SNAPSHOT.jar"/>
+  </path>
+  
+  <path id="auction-example-06.module.classpath">
+    <pathelement location="${auction-example-06.output.dir}"/>
+    <pathelement location="${basedir}/lib/deploy/commons-io-1.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/commons-lang-2.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smack_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smackx_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/develop/cglib-nodep-2.2.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-4.6-src.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-dep-4.6.jar"/>
+    <pathelement location="${basedir}/lib/develop/objenesis-1.0.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-core-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-swing-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-legacy-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-junit4-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-core-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-library-SNAPSHOT.jar"/>
+    <path refid="${module.jdk.classpath.auction-example-06}"/>
+  </path>
+  
+  <path id="auction-example-06.runtime.module.classpath">
+    <pathelement location="${auction-example-06.output.dir}"/>
+    <pathelement location="${basedir}/lib/deploy/commons-io-1.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/commons-lang-2.4.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smack_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/deploy/smackx_3_1_0.jar"/>
+    <pathelement location="${basedir}/lib/develop/cglib-nodep-2.2.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-4.6-src.jar"/>
+    <pathelement location="${basedir}/lib/develop/junit-dep-4.6.jar"/>
+    <pathelement location="${basedir}/lib/develop/objenesis-1.0.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-core-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/windowlicker-swing-DEV.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-legacy-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/jmock-junit4-2.6-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-core-SNAPSHOT.jar"/>
+    <pathelement location="${basedir}/lib/develop/hamcrest-library-SNAPSHOT.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.auction-example-06">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.auction-example-06">
+    <patternset refid="excluded.from.module.auction-example-06"/>
+  </patternset>
+  
+  <path id="auction-example-06.module.sourcepath">
+    <dirset dir="${module.auction-example-06.basedir}">
+      <include name="src"/>
+      <include name="test/end-to-end"/>
+      <include name="test/unit"/>
+      <include name="test/integration"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.auction-example-06" depends="compile.module.auction-example-06.production,compile.module.auction-example-06.tests" description="Compile module auction-example-06"/>
+  
+  <target name="compile.module.auction-example-06.production" depends="register.custom.compilers" description="Compile module auction-example-06; production classes">
+    <mkdir dir="${auction-example-06.output.dir}"/>
+    <javac2 destdir="${auction-example-06.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.auction-example-06}/javac">
+      <compilerarg line="${compiler.args.auction-example-06}"/>
+      <bootclasspath refid="auction-example-06.module.bootclasspath"/>
+      <classpath refid="auction-example-06.module.production.classpath"/>
+      <src refid="auction-example-06.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.auction-example-06"/>
+    </javac2>
+    
+    <copy todir="${auction-example-06.output.dir}">
+      <fileset dir="${module.auction-example-06.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.auction-example-06.basedir}/test/end-to-end">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.auction-example-06.basedir}/test/unit">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.auction-example-06.basedir}/test/integration">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.auction-example-06.tests" depends="register.custom.compilers,compile.module.auction-example-06.production" description="compile module auction-example-06; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.auction-example-06" description="cleanup module">
+    <delete dir="${auction-example-06.output.dir}"/>
+    <delete dir="${auction-example-06.testoutput.dir}"/>
+  </target>
+</project>

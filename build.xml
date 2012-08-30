@@ -41,12 +41,12 @@
     
     <target name="openfire.check">
         <waitfor checkevery="1" checkeveryunit="second" maxwait="20" timeoutproperty="openfire.is.down">
-            <http url="http://localhost:9090" />
+            <http url="http://127.0.0.1:9090" />
         </waitfor>
     </target>
     
     <target name="test.run"
-    		description="Run the tests" 
+    		description="Run the end-to-end tests" 
     		depends="test.compile, openfire.check" >
         <fail message="OpenFire is not running" if="openfire.is.down"/>
         <property name="test.reports.dir" location="${build.dir}/testreports"/>
@@ -63,6 +63,42 @@
         </junit>
     </target>
     
+<target name="test.unit"
+    		description="Run unit tests" 
+    		depends="test.compile, openfire.check" >
+        <fail message="OpenFire is not running" if="openfire.is.down"/>
+        <property name="test.reports.dir" location="${build.dir}/testreports"/>
+        <mkdir dir="${test.reports.dir}"/>
+        <junit>
+            <batchtest todir="${test.reports.dir}" haltonfailure="true" haltonerror="true">
+                <formatter type="plain"/>
+                <fileset dir="${test.dir}" includes="/unit/**/*Test*.java" />
+            </batchtest>
+            <classpath>
+                <path refid="test.lib.path" />
+                <path location="${test.classes.dir}" />
+            </classpath>
+        </junit>
+    </target>
+
+  <target name="test.integration"
+    		description="Run integration tests" 
+    		depends="test.compile, openfire.check" >
+        <fail message="OpenFire is not running" if="openfire.is.down"/>
+        <property name="test.reports.dir" location="${build.dir}/testreports"/>
+        <mkdir dir="${test.reports.dir}"/>
+        <junit>
+            <batchtest todir="${test.reports.dir}" haltonfailure="true" haltonerror="true">
+                <formatter type="plain"/>
+                <fileset dir="${test.dir}" includes="/integration/**/*Test*.java" />
+            </batchtest>
+            <classpath>
+                <path refid="test.lib.path" />
+                <path location="${test.classes.dir}" />
+            </classpath>
+        </junit>
+    </target>
+
     <target name="build"
     	description="Clean, build, and full test" 
    		depends="clean, test.run" />

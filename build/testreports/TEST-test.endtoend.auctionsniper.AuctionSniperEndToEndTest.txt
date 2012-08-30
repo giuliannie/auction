@@ -1,0 +1,9 @@
+Testsuite: test.endtoend.auctionsniper.AuctionSniperEndToEndTest
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 38.201 sec
+
+Testcase: sniperJoinsAuctionUntilAuctionCloses took 7.456 sec
+Testcase: sniperMakesAHigherBidButLoses took 4.462 sec
+Testcase: sniperWinsAnAuctionByBiddingHigher took 4.589 sec
+Testcase: sniperBidsForMultipleItems took 8.884 sec
+Testcase: sniperLosesAnAuctionWhenThePriceIsTooHigh took 4.375 sec
+Testcase: sniperReportsInvalidAuctionMessageAndStopsRespondingToEvents took 8.419 sec
